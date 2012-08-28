@@ -1,0 +1,44 @@
+7, Jan 2011 ( post details - lightbox issue solved)
+----------------------------------
+page-gallery.php
+library/js/fancybox (new javascript,css,images added)
+
+Removed this files
+-------------------------
+library/js/mootools.js
+library/js/slimbox.js
+library/css/slimbox.css 
+
+
+
+13th - Dec, 2010 (menu issue)
+--------------------------------------------
+dropdownmenu.css
+
+
+
+
+7th - July, 2010
+--------------------------------------------
+IE6 dropdownmenu fix
+
+- header.php
+- library/css/dropdownmenu.css
+- library/js/menu.js add (only for ie6 browser)
+
+
+
+
+
+9th - June, 2010 (email format to UTF-8)
+--------------------------------------------
+page_contact.php
+
+
+08/06/2010 Changes
+---------------------------------
+
+- style.css 
+- skins/1-default.css
+
+ 

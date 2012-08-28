@@ -1,0 +1,249 @@
+/*	--------------------------------------------------
+Global Reset - Resets all browser defaults to 0
+-------------------------------------------------- */
+body { background:#e3e2f2 url(5-blue/bodybg.png) repeat-x top; color:#555;}
+a { color:#000; }
+a:hover { color:#da4774; }
+
+hr { color:#fffdea; border:none; border-top:1px dotted #c5c2b9; }
+.hr2 { color:#fffdea; border:none;  }
+/* headings ---------------------- */
+h1,h2,h3,h4,h5,h6 { color:#000; }
+h1.head { color:#012665; background:url(5-blue/head_bg.png) no-repeat left bottom;  }
+h1.head a { color:#012665; }
+h1.head a:hover { color:#333; }
+
+/* Structure ---------------------- */
+#index_sidebar { background:url(5-blue/index_sidebarbg.png) no-repeat right top; }
+#slider_banner { background:url(5-blue/silder_bottombg.png) no-repeat center 495px;  }
+#sidebr_banner_in { background:#000 url(5-blue/slider_imgbg_top.png) no-repeat left top; }
+
+
+.inner_bg { background:url(5-blue/innerbg.png) no-repeat left top; min-height:500px; }
+.inner_bg_full { background:url(5-blue/innerbg2.png) no-repeat left top !important; min-height:500px; }
+#footer { background:url(5-blue/footerbg.png) no-repeat left 20px;  }
+
+
+
+/* header ---------------------- */
+#header .blog-title a{ color:#fff; }
+#header .blog-title a:hover{color:#eee }
+#header .blog-description{ color:#6479a4; }
+#header .photo { float:left; border:2px solid #d5d5d5; margin-right:10px; }
+
+.call_now { color:#6479a4; }
+.call_now span { color:#c9ccea;  }
+.address { color:#6479a4; }
+
+/* Banner ---------------------- */
+.nivo-controlNav a { background:url(5-blue/slider_dot.png) no-repeat ; border:none; color:#fff; }
+.nivo-controlNav a:hover, .nivo-controlNav a.active { background:url(5-blue/slider_dot2.png) no-repeat ; }
+
+
+/* Reservation -------------------- */
+.reservation { background:#d2d1e7 url(5-blue/reservation_center.png) repeat-x top; } 
+.reservation_top { background:url(5-blue/reservation_top.png) repeat-x top; }
+.reservation_bottom { background:url(5-blue/reservation_bottom.png) repeat-x bottom; }
+
+.reservation h3 { color:#012665; }
+.reservation p { color:#655f4a; }
+.reservation p.more a { color:#da4774; }
+.reservation p.more a:hover { color:#333; }
+
+.reservation_section { background:url(../images/i_reservation.png) no-repeat right 14px;  }
+.special_offers { background:url(../images/i_specialoffers.png) no-repeat right 20px;  }
+.reservation p.more { background:url(5-blue/i_arrow.png) no-repeat left 2px; }
+
+.download_brochure { background:#d1d1e4; border:1px solid #bfb9cb;}
+.download_brochure_in { border:1px solid #fff; }
+.download_brochure_in p a { color:#da4774;  }
+.download_brochure_in p a:hover { color:#333;  }
+
+.content_sepretor { background:url(5-blue/content_sepretor.png) no-repeat left bottom; }
+
+.subscribe { background:#d1d1e4; border:1px solid #bfb9cb; }
+.subscribe_in { border:1px solid #fff; }
+.subscribe_in p { color:#655f4a; background:url(../images/i_newsletter.png) no-repeat left top; }
+.subscribe_in .textfield { border:1px solid #ccc; background:#fff; }
+.subscribe_in .bsubscribe { background:url(5-blue/b_submit.png) repeat-x top; color:#e8e4d8; }
+
+#index_content h3 { color:#012665; }
+
+#index_sidebar h3 { color:#012665; }
+#index_sidebar li { border-bottom:1px dotted #74726c;  }
+#index_sidebar li span { background:#c7c7e3; }
+#index_sidebar li span small { background:#02255a;  color:#fff;  }
+#index_sidebar li a { color:#655f4a; }
+#index_sidebar li a:hover { color:#000; }
+
+#index_sidebar  p.more_news { background:url(5-blue/arrow.png) no-repeat right 6px;   }
+#index_sidebar  p.more_news a { color:#da4774; }
+#index_sidebar  p.more_news a:hover { color:#000; }
+
+#index_content blockquote cite { color:#333; }
+#index_content .download_brochure_in h3 { color:#012665; }
+#index_content .download_brochure_in p { color:#666; }
+
+
+/* contact us -------*/
+#content .form_row .textfield { border:1px solid #ccc; background:#fff; } 
+#content .form_row .textarea { border:1px solid #ccc; background:#fff; } 
+#content .error, .message_error2 { color:#690c0a; }
+#contact_frm .b_submit  { border:1px solid #333; background:#012665; color:#fff; }
+#content p.success_msg { color:#356c1d; background:#cee8c3; border-top:1px solid #7ea96b; border-bottom:1px solid #7ea96b; }
+
+
+/*---------Top Pages Navigation for PAGES---------  */
+#nav ul li ul li { border-style: solid; border-width: 1px; border-color:#828697; background:#fff; }
+#nav ul li ul li.hover, #nav ul li ul li:hover,  #nav ul li ul li.current-cat:hover,  #nav ul li ul li.current_page_parent:hover, #nav ul li ul li.current_page_item:hover { color:#333; background:#363636;  }
+#nav ul li a { color:#748bb5; background:none;  }
+#nav ul li a:hover { color:#fff; background:none;  }
+
+#nav ul li.current_page_item a, #nav ul li.current_page_parent a,  #nav ul li.current-menu-item a { background:none; color:#fff; }
+
+#nav ul li.current_page_item ul li a, #nav ul li.current_page_parent ul li a, #nav ul li ul li a { background:#dae1ff; color:#666;  }
+#nav ul li.current_page_item ul li a:hover, #nav ul li.current_page_parent ul li.current_page_item a, #nav ul li.current_page_parent ul li a:hover, #nav ul li ul li a:hover { background:#fff; color:#3264b6; }
+#nav ul li ul li.current_page_parent a { background:#fff; color:#3264b6; } 
+
+#nav ul li ul.sub-menu li a, #nav ul li ul.sub-menu ul.sub-menu li a { background:#dae1ff; color:#666;  }
+#nav ul li ul.sub-menu li a:hover,  #nav ul li ul.sub-menu li.current-menu-item a, #nav ul li ul.sub-menu ul.sub-menu li a:hover { background:#fff; color:#3264b6; }
+
+
+
+/*#breadcrumb section  =================================== */
+.breadcrumb { color:#666 } 
+.breadcrumb a { color:#da4774;  }
+.breadcrumb a:hover { color:#333; }
+
+/* content ---------------------------- */
+#content li { background:url(5-blue/i_bullet.gif) no-repeat left 8px; }
+#content ol li { background:none; }
+
+#content .gallerylist li img { border:2px solid #ccc; background:#fff;   }
+#content .img { border:2px solid #ccc; }
+
+#content .gallerylist li p a { color:#da4774; }
+#content .gallerylist li p a:hover { color:#000; }
+
+#content h3 { color:#000; }
+#content h4.cate_title { color:#333; }
+
+#content h3.bnone { border-bottom:none; }
+.featured_work { border-bottom:5px solid #e3e3e3; }
+.featured_work img {border:1px solid #babab2; }
+
+#content .services p strong { color:#000;  }
+#content p.more a { color:#333; }
+#content p.more a:hover { color:#000; }
+
+
+/* post ---------------------------- */
+
+code { background:#ccc; }
+
+blockquote { background:url(5-blue/blockquote.png) no-repeat;    } 
+blockquote p { color:#333;  }
+blockquote cite { color:#666; }
+
+blockquote a { color:#333; }
+blockquote a:hover { color:#000; }
+
+.flickr h3 span{ color:#000 }
+.flickr h3 span b{ color:#FF1183 }
+.flickr img{ border:1px solid #969696; background:#F4F4F4; }
+.flickr img:hover{ border-color:#333 }
+
+
+#content .post_top h2 a { color:#012665; }
+#content .post_top h2 a:hover { color:#da4774; }
+.commentcount { background:url(../images/i_comment.png) no-repeat left 0px; }
+
+
+#content .headline { background:url(../images/i_post_s.png) no-repeat 5px 14px; border-bottom:1px solid #ccc; }
+#content .headline:hover { background:#eee url(../images/i_post_s.png) no-repeat 5px 14px; border-bottom:1px solid #ccc; cursor:pointer; }
+
+#content .headline h3 { border:none;  }
+#content .headline h3 a { color:#333;  }
+#content .headline h3 a:hover { color:#000;  }
+#content .headline .commentcount {  float:right; }
+#content .headline .commentcount a { color:#666; }
+#content .headline .commentcount a:hover { color:#000; }
+
+
+
+#content .post_top a { color:#777; }
+#content .post_top a:hover { color:#333;}
+
+#content .posts { background:url(5-blue/post_sepretor.png) no-repeat bottom center;  }
+#content .posts h2.title a { color:#333; }
+#content .posts h2.title a:hover { color:#000; }
+
+#content .post_top p.postmetadata { color:#777; }
+
+#content p.post_bottom {color:#555; background:url(../images/i_category.png) no-repeat left 5px; }
+#content p.post_bottom a { color:#444; }
+#content p.post_bottom a:hover { color:#000; }
+
+/* Post Pagination */
+
+.pagination .on { background:#064f18; color:#fff; }
+.pagination a { background:#6b9876; }
+.pagination a:hover { background:#2d5a38; color:#fff; }
+
+
+/*#sidebar ----------------------- */
+#sidebar .widget h3 { color:#012665; border-bottom:1px solid #9b978a;  }
+
+#sidebar li { background:url(5-blue/bullet.png) no-repeat left 3px;  }
+#sidebar li a { color:#444; }
+#sidebar li a:hover { color:#da4774; }
+
+#sidebar .widget p a { color:#da4774; text-decoration:underline; }
+#sidebar .widget p a:hover { color:#333; }
+
+
+/* widget search bobx */
+#searchform { border:1px solid #ccc; }
+#searchform input { border:1px solid #ccc; background:#fff; }
+#searchform #searchsubmit { background:#da4774; font:12px Arial, Helvetica, sans-serif; color:#fff; border:none;  }
+
+	  
+/*---------ARCHIVE PAGE --------- */
+.arclist ul li{ color:silver; border-bottom:1px solid #f1f1ed;  background:none }
+.arclist ul li ul{ border-bottom:0; }
+.arclist ul li ul li{ border-bottom:0;}
+.arclist .archives-time{ color: #666666; border-right: dashed 1px #ddd; }
+
+/*---------COMMENTS --------- */
+#comments h3{ border-bottom:1px dotted #9b978a; }
+
+#comments .comment {background:none; }
+#comments  p.authorcomment {  color:#da4774; }
+#comments  p.authorcomment a {  color:#da4774; }
+#comments  p.authorcomment a:hover { color:#333; }
+
+#comments  p.authorcomment span { color:#9b978a; }
+
+
+#comments .comment .meta-left { color:#aaaaaa }
+#comments .comment .text-right { border:none;  /*background:#e9e7e7 url(5-blue/commentbg.png) no-repeat center left;*/ }
+#comments .comment .authcomment{ color:#594812; /*background:#d5d5d5 url(5-blue/commentbg_author.png) no-repeat center left; border:none; */ }
+#comments .comment .authcomment p { color:#000; }
+
+span.comm-reply{ color:#777; }
+span.comm-reply a { color:#777;  }
+span.comm-reply a:hover{ color:#da4774; }
+#respond textarea, .commpadd input{ background:none; border:1px solid #9b978a; font:14px Arial, Helvetica, sans-serif;   }
+input#submit{ color:#fff; background:#da4774; border:1px solid #da4774;  }
+.avatar { border:2px solid #ccc; }
+
+.indicates { color:#900; font-size:11px; }
+
+/* footer ---------------------------- */
+#footer p { color:#756f7c; }
+#footer .copyright , #footer .copyright  a { color:#756f7c; }
+#footer p a:hover {  color:#fff; }
+
+#footer li { border-left:1px solid #ccc4ad; }
+#footer li a { color:#756f7c; }
+#footer li a:hover { color:#da4774; }

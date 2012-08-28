@@ -1,0 +1,94 @@
+/*	--------------------------------------------------
+Global Reset - Resets all browser defaults to 0
+-------------------------------------------------- */
+body { background:#f0f0f0 url(2-black/bodybg.png) repeat-x top; color:#555;}
+a { color:#000; }
+a:hover { color:#3683ca; }
+
+hr { color:#fffdea; border:none; border-top:1px dotted #c5c2b9; }
+.hr2 { color:#fffdea; border:none;  }
+/* headings ---------------------- */
+h1,h2,h3,h4,h5,h6 { color:#000; }
+h1.head { color:#000; background:url(2-black/head_bg.png) no-repeat left bottom;  }
+h1.head a { color:#000; }
+h1.head a:hover { color:#333; }
+
+/* Structure ---------------------- */
+#index_sidebar { background:url(2-black/index_sidebarbg.png) no-repeat right top; }
+#slider_banner { background:url(2-black/silder_bottombg.png) no-repeat center 495px;  }
+#sidebr_banner_in { background:#000 url(2-black/slider_imgbg_top.png) no-repeat left top; }
+
+
+.inner_bg { background:url(2-black/innerbg.png) no-repeat left top; min-height:500px; }
+.inner_bg_full { background:url(2-black/innerbg2.png) no-repeat left top !important; min-height:500px; }
+
+#footer { background:url(2-black/footerbg.png) no-repeat left 20px;  }
+
+
+
+/* header ---------------------- */
+#header .blog-title a{ color:#fff; }
+#header .blog-title a:hover{color:#eee }
+#header .blog-description{ color:#beb49a; }
+#header .photo { float:left; border:2px solid #d5d5d5; margin-right:10px; }
+
+.call_now { color:#c0c0c0; }
+.call_now span { color:#e8e8e8;  }
+.address { color:#bfbfbf; }
+
+/* Banner ---------------------- */
+.nivo-controlNav a { background:url(2-black/slider_dot.png) no-repeat ; border:none; color:#fff; }
+.nivo-controlNav a:hover, .nivo-controlNav a.active { background:url(2-black/slider_dot2.png) no-repeat ; }
+
+
+/* Reservation -------------------- */
+.reservation { background:#d3d3d3 url(2-black/reservation_center.png) repeat-x top; } 
+.reservation_top { background:url(2-black/reservation_top.png) repeat-x top; }
+.reservation_bottom { background:url(2-black/reservation_bottom.png) repeat-x bottom; }
+
+.reservation h3 { color:#000; }
+.reservation p { color:#655f4a; }
+.reservation p.more a { color:#3683ca; }
+.reservation p.more a:hover { color:#333; }
+
+.reservation_section { background:url(../images/i_reservation.png) no-repeat right 14px;  }
+.special_offers { background:url(../images/i_specialoffers.png) no-repeat right 20px;  }
+.reservation p.more { background:url(2-black/i_arrow.png) no-repeat left 2px; }
+
+.download_brochure { background:#e2e0e0; border:1px solid #afafaf; }
+.download_brochure_in { border:1px solid #fff; }
+.download_brochure_in p a { color:#3683ca;  }
+.download_brochure_in p a:hover { color:#333;  }
+
+.content_sepretor { background:url(2-black/content_sepretor.png) no-repeat left bottom; }
+
+.subscribe { background:#e2e0e0; border:1px solid #afafaf; }
+
+/* css add */
+#index_sidebar h3, #index_content h3 { color:#000; }
+#index_sidebar li span { background:#ccc; }
+#index_sidebar li span small { background:#000;  color:#fff;  }
+#index_sidebar  p.more_news a { color:#3683CA; }
+#index_sidebar  p.more_news a:hover { color:#000; }
+
+#index_content blockquote cite {
+color:#000;
+}
+
+/* navigation -------------- */
+#nav ul li ul li { border-style: solid; border-width: 1px; border-color: #ccc #ccc #ccc; background:#fff; }
+#nav ul li ul li.hover, #nav ul li ul li:hover,  #nav ul li ul li.current-cat:hover,  #nav ul li ul li.current_page_parent:hover, #nav ul li ul li.current_page_item:hover { color:#333; background:#363636;  }
+#nav ul li a { color:#aaa; background:none;  }
+#nav ul li a:hover { color:#fff; background:none;  }
+
+#nav ul li.current_page_item a, #nav ul li.current_page_parent a, #nav ul li.current-menu-item a  { background:none; color:#fff; }
+
+#nav ul li.current_page_item ul li a, #nav ul li.current_page_parent ul li a, #nav ul li ul li a { background:#eee; color:#666;  }
+#nav ul li.current_page_item ul li a:hover, #nav ul li.current_page_parent ul li.current_page_item a, #nav ul li.current_page_parent ul li a:hover, #nav ul li ul li a:hover { background:#fff; color:#000; }
+#nav ul li ul li.current_page_parent a { background:#fff; color:#000; } 
+
+#nav ul li ul.sub-menu li a, #nav ul li ul.sub-menu ul.sub-menu li a { background:#eee; color:#000;  }
+#nav ul li ul.sub-menu li a:hover,  #nav ul li ul.sub-menu li.current-menu-item a, #nav ul li ul.sub-menu ul.sub-menu li a:hover { background:#fff; color:#000; }
+
+#sidebar li a, #sidebar .widget p a, .breadcrumb a  { color:#555; }
+#sidebar li a:hover { color:#000; }

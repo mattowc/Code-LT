@@ -1,0 +1,16 @@
+/*
+File:			custom.css
+Description:	Custom styles for Your Theme
+
+HOW TO USE THIS FILE:
+
+Override any class you want and it will change default styling to suit your needs.
+
+For example, if you wish to change the default text blog title to grey, you would add the 
+following declarations to this file:
+
+	#header .blog-title a{ background:#cccccc }     <--- This makes blog title background grey
+
+*/
+
+#footer p span.templatic { width:112px; display:block; overflow:hidden;  float:left;    color:#fff;  background:url(images/onewebcentric.png) no-repeat 0;   }

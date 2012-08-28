@@ -1,0 +1,5 @@
+[15-May-2012 16:10:26] PHP Fatal error:  Call to undefined function  get_header() in /home2/learnjh2/public_html/wp-content/themes/Hospitality/index.php on line 14
+[26-Jun-2012 12:00:57] PHP Fatal error:  Call to undefined function  get_header() in /home2/learnjh2/public_html/wp-content/themes/Hospitality/index.php on line 14
+[26-Jun-2012 12:00:59] PHP Fatal error:  Call to undefined function  get_header() in /home2/learnjh2/public_html/wp-content/themes/Hospitality/index.php on line 14
+[26-Jun-2012 12:01:01] PHP Fatal error:  Call to undefined function  get_header() in /home2/learnjh2/public_html/wp-content/themes/Hospitality/index.php on line 14
+[26-Jun-2012 12:01:02] PHP Fatal error:  Call to undefined function  get_header() in /home2/learnjh2/public_html/wp-content/themes/Hospitality/index.php on line 14
