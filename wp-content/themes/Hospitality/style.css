@@ -531,3 +531,51 @@ font: 14px Arial, Helvetica, sans-serif;
 padding: 6px 24px;
 cursor: pointer;
 }
+
+.jon_half {
+	width: 43%;
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+	color: #FFF;
+	margin-top: 25px;
+}
+
+.jon_end_half {
+	width: 55%;
+	display: inline-block;
+	float: right;
+	margin-top: 30px;
+}
+
+.jon_video_page {
+	padding: 15px;
+	background: url('images/pbs-feature-bg.jpeg');
+	height: 455px;
+	font-size: 14px;
+	color: #FFF;
+}
+
+.jon_video_page h1 {
+	color: #B0F5FA;
+	font-size: 32px;
+}
+
+.jon_video {
+	margin: 0 auto;
+	display: block;
+
+}
+
+.jon_call_to_action {
+	border: 1px solid orange;
+	background: orange;
+	color: white;
+	font: 14px Arial, Helvetica, sans-serif;
+	padding: 6px 24px;
+	cursor: pointer;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	width: 150px;
+}

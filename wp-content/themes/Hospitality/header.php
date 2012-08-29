@@ -125,8 +125,6 @@ $(document).ready(function() {
             
             <?php	 	  if ( get_option('ptthemes_hotel_address') != "") { ?>
  					<div class="address"><?php	 	  echo stripslashes(get_option('ptthemes_hotel_address'));  ?>
- 					<br /><a style="font-size: 15px; color: #FFF;" href="http://learningtechnicsutah.com/?page_id=526">Utah Locations</a>
-
  					</div>
         <?php	 	  } ?>
             
