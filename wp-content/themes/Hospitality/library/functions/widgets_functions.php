@@ -293,7 +293,7 @@ class BlockquoteWidget extends WP_Widget {
 	   ?>
          
         <?php	 	  if ( $more <> "" ) { ?>	
-        <p class="more"><a href="<?php	 	  echo $more; ?>">More reviews and buzz &raquo; </a></p>
+        <p class="more"><a href="<?php	 	  echo $more; ?>">More success stories &raquo; </a></p>
          <?php	 	  } ?>
          
        
@@ -412,24 +412,52 @@ register_widget('downloadwidget');
 // =============================== Feedburner Subscribe widget ======================================
 function subscribeWidget()
 {
+	// Include the MCAPI 
+	include( TEMPLATEPATH . "/inc/MCAPI.class.php");
+
+	// Get the settings for the widget
 	$settings = get_option("widget_subscribewidget");
 
+	// Parse the options
 	$id = $settings['id'];
 	$title = $settings['title'];
 	$text = $settings['text'];	
 
+	// Instantiate the Mail Chimp API object
+	$api = new MCAPI( get_option( 'mailchimp_api' ) ); // TO-DO:  INSERT THE API KEY.  
 ?> 
+	<div id="sub" style="margin-top: -60px; padding-top: 60px;"></div>
     <div class="subscribe">
         <div class="subscribe_in">
-                <p><?php	 	  echo $text; ?></p>
-      <form  action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow"  onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php	 	  echo $id; ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"> 
-<input type="text" class="textfield" onFocus="if (this.value == 'Your Email Address') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Your Email Address';}" name="email"/>
-      <input type="hidden" value="<?php	 	  echo $id; ?>" class="" name="uri"/>
-      <input type="hidden" name="loc" value="en_US"/>
-       <input type="image" src="<?php	 	  bloginfo('template_url'); ?>/images/none.png"   value="Subscribe" class="bsubscribe" />
-       </form>
-                                
-     </div>
+        	<?php 
+        	// Handle submission
+        	if( isset( $_POST['subscribe'] ) && isset( $_POST['email'] ) )
+        	{
+        		// Parse the email, and add it to the list
+        		$email  = $_POST['email'];
+				$retval = $api->listSubscribe( get_option( 'mailchimp_list_key' ), $email );
+
+				// Give the user feedback
+				if( $api->errorCode )
+				{
+					$text = '<span style="color: red;">Oops, there was an error!</span><br />';
+					$text .= '<span style="color: red;">' . $api->errorMessage . '</span>';
+
+				}
+				else
+				{
+					$text = '<span style="color: green;">You\'ve been added to the list!  You will be contacted to confirm your submission.</span>';
+				}
+        	}
+        	?>
+            <p><?php echo $text; ?></p>
+       		<form action="#sub" method="post"> 
+				<input type="text" class="textfield" onFocus="if (this.value == 'Your Email Address') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Your Email Address';}" name="email"/>
+      			<input type="hidden" value="<?php	 	  echo $id; ?>" class="" name="uri"/>
+     			<input type="hidden" name="loc" value="en_US"/>
+       			<input name="subscribe"  type="image" src="<?php	 	  bloginfo('template_url'); ?>/images/none.png"   value="Subscribe" class="bsubscribe" alt="submit" />
+       		</form>                         
+     	</div>
  </div> <!-- subscribein #end -->
 		 
 
