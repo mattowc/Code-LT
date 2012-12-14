@@ -28,10 +28,15 @@
 		  <div class="span6" id="tbs_docs_shortcodes">
 			  <div class="well">
 				<h3>WordPress Twitter Bootstrap CSS Plugin Shortcodes</h3>
+				<p>Check the <a href="http://bit.ly/OFXMBh" target="_blank">Twitter Bootstrap Plugin Shortcodes Demo Page</a> for complete demos for all shortcodes!</p>
 				<p>To learn more about what shortcodes are, <a href="http://www.hostliketoast.com/2011/12/how-extend-wordpress-powerful-shortcodes/">check this link</a></p>
 				<p>The following shortcodes are available:</p>
 				<ol>
-					<li>[ <a href="http://bit.ly/HOt01C" title="Twitter Bootstrap Badge Shortcode">TBS_BADGE</a> ] <span class="label label-success">new</span></li>
+					<li>[ <a href="http://bit.ly/OFXMBh" title="Twitter Bootstrap Plugin Shortcodes Demo Page">TBS_PROGRESS_BAR</a> ] <span class="label label-success">new</span></li>
+					<li>[ <a href="http://bit.ly/OFXMBh" title="Twitter Bootstrap Plugin Shortcodes Demo Page">TBS_COLLAPSE | TBS_COLLAPSE_GROUP</a> ] <span class="label label-success">new</span></li>
+					<li>[ <a href="http://bit.ly/T65cho" title="Twitter Bootstrap Row Shortcode">TBS_ROW</a> ] <span class="label label-success">new</span></li>
+					<li>[ <a href="http://bit.ly/T65cho" title="Twitter Bootstrap Span Shortcode">TBS_SPAN</a> ] <span class="label label-success">new</span></li>
+					<li>[ <a href="http://bit.ly/HOt01C" title="Twitter Bootstrap Badge Shortcode">TBS_BADGE</a> ] </li>
 					<li>[ <a href="http://bit.ly/zmGUeD" title="Twitter Bootstrap Glyph Icon WordPress Shortcode">TBS_ICON</a> ]</li>
 					<li>[ <a href="http://bit.ly/AlETMx" title="Twitter Bootstrap Button WordPress Shortcode">TBS_BUTTON</a> ]</li>
 					<li>[ <a href="http://bit.ly/wIUa7U" title="Twitter Bootstrap Button WordPress Shortcode">TBS_BUTTONGROUP</a> ]</li>
@@ -52,6 +57,7 @@
 		  <div class="well">
 			<h3>Shortcode Usage Examples</h3>
 			<div class="shortcode-usage">
+				<p>Check the <a href="http://bit.ly/OFXMBh" target="_blank">Twitter Bootstrap Plugin Shortcodes Demo Page</a> for complete demos for all shortcodes!</p>
 				<p>The following are just some examples of how you can use the shortcodes with the associated HTML output</p>
 				<ul>
 					<li><span class="code">[TBS_BUTTON id="mySpecialButton" link="http://worpit.com"]Click Me[/TBS_BUTTON]</span>

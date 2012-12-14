@@ -4,7 +4,7 @@ Donate link: http://worpit.com/
 Tags: CSS, WordPress Admin, Twitter Bootstrap, Twitter Bootstrap Javascript, Bootstrap CSS, WordPress Bootstrap, normalize, reset, YUI
 Requires at least: 3.2.0
 Tested up to: 3.4.1
-Stable tag: 2.0.4.5
+Stable tag: 2.1.1.0
 
 WordPress Twitter Bootstrap CSS lets you include the latest Twitter Bootstrap CSS and Javascript libraries in your WordPress site.
 
@@ -13,7 +13,7 @@ WordPress Twitter Bootstrap CSS lets you include the latest Twitter Bootstrap CS
 What is Twitter Bootstrap?
 It's a CSS and Javascript framework that helps boost your site design and functionality quickly.
 
-We love Twitter Bootstrap on our [WordPress sites at Worpit](http://worpit.com/ "Worpit: The Faster WordPress Manager").
+We love Twitter Bootstrap on our [WordPress sites at Worpit](http://worpit.com/ "Worpit: Manage WordPress Better").
 And we wanted a way to quickly link the latest Bootstrap CSS and Javascript to all pages, regardless of the WordPress Theme.
 
 With this plugin, now you can!
@@ -88,6 +88,21 @@ Bootstrap CSS.
 
 Select the CSS file as desired.
 
+= How can I use the WordPress Twitter Bootstrap Shortcodes? =
+
+I've put a full demo page of all the fully support shortcodes in this plugin:
+[Complete WordPress Twitter Bootstrap Shortcodes demo page](http://bit.ly/OFYCh8 "Complete WordPress Twitter Bootstrap Shortcodes demo page")
+
+= What are all the parameters for all the shortcodes? =
+
+For all the shortcodes simply type help="y" and preview your post - it will print a box for you showing all parameters, their default values
+and an explanation where appropriate.
+
+= The WordPress Shortcodes aren't getting processed properly - why? =
+
+You need to enable the shortcodes feature in the options page. This is a performance optimization so that people who don't need
+it don't have to process it.  Also, some require the Bootstrap Javascript library to be loaded so enable that also if you require it. 
+
 = Why was Twitter ("Legacy") Bootstrap v1.4.0 support dropped from the plugin in v2.0.3? =
 
 Time and resources. The work to maintain it and ensure it's bug-free was getting too great.
@@ -125,7 +140,7 @@ Otherwise, consult your caching program's documentation.
 
 = Do you make any other plugins? =
 
-We also created the [Worpit WordPress Site Manager](http://worpit.com/?src=wtb_readme) for people with more than one WordPress site to manage.
+We also created the [Worpit Multiple WordPress Site Manager](http://worpit.com/?src=wtb_readme) for people with more than one WordPress site to manage.
 
 Yes, we created [Custom Content By Country](http://wordpress.org/extend/plugins/custom-content-by-country/ "Custom Content By Country WordPress Plugin")
 plugin that lets you display content to users in specific regions.
@@ -171,19 +186,52 @@ Don't select this unless you know you need it - no harm if you do, but no point 
 
 == Changelog ==
 
-= 2.0.4.5 = 
+= TODO =
+* Provide better upgrade support for customized Variable.less files. Currently if you've customized your Variables.less file manually
+you'll need to back it up before you upgrade your Bootstrap plugin.
+
+= 2.1.1.0 =
+* UPDATED: Twitter Bootstrap library to latest release v2.1.1
+* ADDED: option to Popover to allow you to set the activation 'trigger' and defaulted it to pre-Bootstrap 2.1.0 behaviour - i.e. on hover!
+* ADDED: option to Tooltip to allow you to set the activation 'trigger' and defaulted it to pre-Bootstrap 2.1.0 behaviour - i.e. on hover!
+* ADDED: btn-block to the shortcode help for buttons.
+* FIX: RSS Feed Widget urls
+
+= 2.1.0.0 =
+* UPDATED: Twitter Bootstrap library to latest release of 2.1.0
+* UPDATED: Normalize CSS upgraded to version 2.0.1
+* FIX: Valid XHMTL http://wordpress.org/support/topic/plugin-wordpress-twitter-bootstrap-css-xhtml-validation
+
+= 2.0.4.8 =
+* ADDED: Shortcode [TBS_PROGRESS_BAR] for Twitter Bootstrap Progress Bars (http://twitter.github.com/bootstrap/components.html#progress)
+* ADDED: MUCH more verbose help on ALL shortcodes. Simply type: help="y" and it will print the help box on your post.
+* ADDED: 'target' parameter to the TBS_BUTTON shortcode so you can open in new window if you want. i.e. target="_blank"
+
+= 2.0.4.7 =
+* ADDED: Shortcode for Twitter Bootstrap accordions - collapsable blocks (http://twitter.github.com/bootstrap/javascript.html#collapse)
+The shortcodes are: [TBS_COLLAPSE] (parent) and {TBS_COLLAPSE_GROUP]. You need to nest the "GROUPS" within the parent.
+* ADDED: "help=y" parameter to all shortcodes so you can quickly print out all available shortcode parameters.
+* ADDED: : [Complete WordPress Twitter Bootstrap Shortcodes demo page](http://bit.ly/OFYCh8 "Complete WordPress Twitter Bootstrap Shortcodes demo page")
+
+= 2.0.4.6 =
+* FIXED: (again) Fatal error reported- http://wordpress.org/support/topic/plugin-wordpress-twitter-bootstrap-css-cant-activate-the-plugin-because-of-fatal-error
+* FIXED: a few minor plugin interface bugs.
+* UPDATED: Normalize.css to latest version (2012-07-07) at time of release
+* ADDED: Shortcode TBS_SPAN - this is just an alias for TBS_COLUMN added previously.
+* ADDED: offset parameter to the TBS_SPAN (and TBS_COLUMN) to reflect offset option in Twitter Bootstrap.
+* ADDED: Responsive CSS is automatically recompiled when CSS is recompiled (regardless of whether responsive is enabled or not)
+
+= 2.0.4.5 =
 * ADDED: NONCE to form submissions to improve the security of the plugin.
 * ADDED: A new compile button - compile CSS from Original or customized Variable.less an option (http://wordpress.org/support/topic/plugin-wordpress-twitter-bootstrap-css-make-compile-variablesless-from-original-an-option)
 * FIXED: Fatal error reported- http://wordpress.org/support/topic/plugin-wordpress-twitter-bootstrap-css-cant-activate-the-plugin-because-of-fatal-error
 
 = 2.0.4.4 =
-
 * FIXED: Further attempt to fix string escape issues (thanks Troy!).
 * FIXED: Bug with Grid Columns field being appended with 'px' in LESS compiler.
 * UPDATED: LESS PHP compiler to latest release (v0.3.5)
 
 = 2.0.4.3 =
-
 * FIXED: An attempt to fix problems some people have with the LESS compiler and escaping double-quoted fonts.
 ** IF you have had problems, do a RESET first, then attempt to compile your customizations. **
 
@@ -354,6 +402,20 @@ is temporary until we fix.
 * Twitter Bootstrap version 1.2.0
 
 == Upgrade Notice ==
+
+= 2.1.0.0 =
+* UPDATED: Twitter Bootstrap library to latest release of 2.1.0
+
+= 2.0.4.8 =
+* New Shortcode!
+* New Shortcode Help.
+
+= 2.0.4.6 =
+* FIXED: (again) Fatal error reported- http://wordpress.org/support/topic/plugin-wordpress-twitter-bootstrap-css-cant-activate-the-plugin-because-of-fatal-error
+* UPDATED: Normalize.css to latest version (2012-07-07) at time of release
+* ADDED: Shortcode TBS_SPAN - this is just an alias for TBS_COLUMN added previously.
+* ADDED: offset parameter to the TBS_SPAN (and TBS_COLUMN) to reflect offset option in Twitter Bootstrap.
+* ADDED: Responsive CSS is automatically recompiled when CSS is recompiled (regardless of whether responsive is enabled or not)
 
 = 2.0.4.5 = 
 * ADDED: NONCE to form submissions to improve the security of the plugin.

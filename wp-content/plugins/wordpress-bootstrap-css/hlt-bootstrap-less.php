@@ -238,7 +238,7 @@ class HLT_BootstrapLess {
 
 		$this->processLessOptions( 'delete' );
 		$this->reWriteVariablesLess( $insBootstrapDir, TRUE );
-		$this->compileLess($insBootstrapDir);
+		$this->compileAllBootstrapLess($insBootstrapDir);
 
 	}//resetToDefaultAllLessOptions
 	
@@ -247,7 +247,7 @@ class HLT_BootstrapLess {
 		$this->processLessOptions( 'process-post', array('options-prefix' => $sOptionsPrefix) );
 
 		if ( $this->reWriteVariablesLess( $insBootstrapDir, $infUseOriginalLessFile ) ) {
-			$this->compileLess( $insBootstrapDir );
+			$this->compileAllBootstrapLess( $insBootstrapDir );
 		}
 
 	}//processNewLessOptions
@@ -283,18 +283,41 @@ class HLT_BootstrapLess {
 	
 	}//reWriteVariablesLess
 	
-	public function compileLess( $insBootstrapDir ) {
-
-		$sFilePathBootstrapLess = $insBootstrapDir.'less'.DS.'bootstrap.less';
+	public function compileAllBootstrapLess( $insBootstrapDir ) {
+		
+		if ( empty($insBootstrapDir) ) {
+			return false;
+		}
+		
+		$this->compileLess( $insBootstrapDir, 'bootstrap' );
+		$this->compileLess( $insBootstrapDir, 'responsive' );
+		
+	}//compileAllBootstrapLess
+	
+	public function compileLess( $insBootstrapDir, $insCompileTarget = 'bootstrap' ) {
+		
+		if ( empty($insBootstrapDir) ) {
+			return false;
+		}
+		
+		$sFilePathToLess = $insBootstrapDir.'less'.DS.$insCompileTarget.'.less';
 		
 		//parse LESS
 		include_once( dirname(__FILE__).'/inc/lessc/lessc.inc.php' );
-		$oLessCompiler = new lessc( $sFilePathBootstrapLess );
+		$oLessCompiler = new lessc( $sFilePathToLess );
+	//	$oLessCompiler->setFormatter("compressed");
 		$sCompiledCss = '';
 		try {
 			$sCompiledCss = $oLessCompiler->parse();
 			
-			$sLessFile = $insBootstrapDir.'css'.DS.'bootstrap.less';
+			if ($insCompileTarget == 'responsive') {
+				$sLessFile = $insBootstrapDir.'css'.DS.'bootstrap-responsive.less';
+			} else if ($insCompileTarget == 'bootstrap') {
+				$sLessFile = $insBootstrapDir.'css'.DS.'bootstrap.less';
+			} else { //Are there others?
+				$sLessFile = $insBootstrapDir.'css'.DS.'bootstrap.less';
+			}
+			
 			file_put_contents( $sLessFile.'.css', $sCompiledCss );
 		
 			//Basic Minify

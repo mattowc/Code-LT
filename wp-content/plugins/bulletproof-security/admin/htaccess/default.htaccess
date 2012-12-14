@@ -1,4 +1,4 @@
-#   BULLETPROOF PRO 5.D DEFAULT .HTACCESS      
+#   BULLETPROOF .47.D >>>>>>> DEFAULT .HTACCESS             
 
 # If you edit the line of code above you will see error messages on the BPS Security Status page
 # WARNING!!! THE default.htaccess FILE DOES NOT PROTECT YOUR WEBSITE AGAINST HACKERS
@@ -6,16 +6,13 @@
 # The DEFAULT .HTACCESS file should be used for testing and troubleshooting purposes only
 
 # BEGIN WordPress
+<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
-
-# uploaded files
-RewriteRule ^files/(.+) wp-includes/ms-files.php?file=$1 [L]
-
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-RewriteRule . index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
 
 # END WordPress

@@ -4,7 +4,7 @@
 Plugin Name: WordPress Twitter Bootstrap CSS
 Plugin URI: http://worpit.com/wordpress-twitter-bootstrap-css-plugin-home/
 Description: Allows you to install Twitter Bootstrap CSS and Javascript files for your site, before all others.
-Version: 2.0.4.5
+Version: 2.1.1.0
 Author: Worpit
 Author URI: http://worpit.com/
 */
@@ -49,13 +49,14 @@ class HLT_BootstrapCss extends HLT_Plugin {
 	const InputPrefix				= 'hlt_bootstrap_';
 	const OptionPrefix				= 'hlt_bootstrapcss_'; //ALL database options use this as the prefix.
 	
-	const TwitterVersion			= '2.0.4';
+	const TwitterVersion			= '2.1.1';
 	const TwitterVersionLegacy		= '1.4.0';
-	const YUI3Version				= '3.5.1';
+	const NormalizeVersion			= '2.0.1';
+	const YUI3Version				= '3.6.0';
 	
 	const GoogleCdnJqueryVersion	= '1.7.2';
 
-	static public $VERSION			= '2.0.4.5'; //SHOULD BE UPDATED UPON EACH NEW RELEASE
+	static public $VERSION			= '2.1.1.0'; //SHOULD BE UPDATED UPON EACH NEW RELEASE
 	
 	static public $BOOSTRAP_DIR;
 	static public $BOOSTRAP_URL;
@@ -136,7 +137,7 @@ class HLT_BootstrapCss extends HLT_Plugin {
 				'section_title' => 'Miscellaneous Plugin Options',
 				'section_options' => array(
 					array( 'inc_bootstrap_css_wpadmin',	'',		'N', 		'checkbox',		'Admin Bootstrap CSS', 'Include Twitter Bootstrap CSS in the WordPress Admin', 'Not a standard Twitter Bootstrap CSS. <a href="http://bit.ly/HgwlZI" target="_blank"><span class="label label-info">more info</span></a>' ),
-					array( 'hide_dashboard_rss_feed',	'',		'N', 		'checkbox',		'Hide HLT News Feed', 'Hide the Host Like Toast news feed from the Dashboard', 'Hides our news feed from inside your Dashboard.' ),
+					array( 'hide_dashboard_rss_feed',	'',		'N', 		'checkbox',		'Hide RSS News Feed', 'Hide the Worpit Blog news feed from the Dashboard', 'Hides our news feed from inside your Dashboard.' ),
 					array( 'delete_on_deactivate',		'',		'N', 		'checkbox',		'Delete Plugin Settings', 'Delete All Plugin Setting Upon Plugin Deactivation', 'Careful: Removes all plugin options when you deactivite the plugin.' ),
 					array( 'prettify',					'',		'N', 		'checkbox',		'Display Code Snippets', 'Include Google Prettify/Pretty Links Javascript', 'If you display code snippets or similar on your site, enabling this option will include the
 											Google Prettify Javascript library for use with these code blocks.' ),
@@ -297,7 +298,7 @@ class HLT_BootstrapCss extends HLT_Plugin {
 				}
 				
 				if ( $oBoostrapLess->reWriteVariablesLess( self::$BOOSTRAP_DIR ) ) {
-					$oBoostrapLess->compileLess( self::$BOOSTRAP_DIR );
+					$oBoostrapLess->compileAllBootstrapLess( self::$BOOSTRAP_DIR );
 				}
 				
 			}//if: use_compiled_css == 'Y'
@@ -334,8 +335,15 @@ class HLT_BootstrapCss extends HLT_Plugin {
 
 		if ( $sCurrentVersion !== self::$VERSION ) {
 			$sNotice = '
+					<style>
+						a#fromWorpit {
+							padding: 0 5px;
+							border-bottom: 1px dashed rgba(0,0,0,0.1);
+							color: black;
+						}
+					</style>
 					<form method="post" action="admin.php?page='.$this->getSubmenuId('bootstrap-css').'">
-						<p><strong>WordPress Twitter Bootstrap from <a href="http://worpit.com/?src=wtb_plugin">Worpit</a></strong> has been updated successfully.
+						<p><strong>WordPress Twitter Bootstrap plugin <a href="http://bit.ly/QhYJzY" id="fromWorpit" title="Manage WordPress Better" target="_blank">from Worpit</a></strong> has been updated successfully.
 						<input type="hidden" value="1" name="hlt_hide_update_notice" id="hlt_hide_update_notice">
 						<input type="hidden" value="'.$user_id.'" name="hlt_user_id" id="hlt_user_id">
 						<input type="submit" value="Okay, take me to the main plugin page and hide this notice" name="submit" class="button-primary">
@@ -554,9 +562,10 @@ class HLT_BootstrapCss extends HLT_Plugin {
 			'twitter'					=> self::$BOOSTRAP_URL.'css/bootstrap'.$sMinifiedCssOption,
 			'twitter_less'				=> self::$BOOSTRAP_URL.'css/bootstrap.less'.$sMinifiedCssOption,
 			'twitter_responsive'		=> self::$BOOSTRAP_URL.'css/bootstrap-responsive'.$sMinifiedCssOption,
+			'twitter_responsive_less'	=> self::$BOOSTRAP_URL.'css/bootstrap-responsive.less'.$sMinifiedCssOption,
 			'yahoo-reset'				=> $this->getCssURL( 'yahoo-2.9.0.min.css' ),
-			'yahoo-reset-3'				=> $this->getCssURL( 'yahoo-'.self::YUI3Version.'.min.css' ),
-			'normalize'					=> $this->getCssURL( 'normalize.css' ),
+			'yahoo-reset-3'				=> $this->getCssURL( 'yahoo-cssreset-min.css' ) . '?ver='.self::YUI3Version,
+			'normalize'					=> $this->getCssURL( 'normalize.css' ) . '?ver='.self::NormalizeVersion,
 		);
 		
 		$sCssLink = $aLocalCss[$sBoostrapOption];
@@ -574,19 +583,26 @@ class HLT_BootstrapCss extends HLT_Plugin {
 					) {
 				$sCssLink = $aLocalCss['twitter_less'];
 			}
-			$sReplace .= "\n".'<link rel="stylesheet" type="text/css" href="'.$sCssLink.'">';
+			$sReplace .= "\n".'<link rel="stylesheet" type="text/css" href="'.$sCssLink.'" />';
 		}
 		
 		//Add the Responsive CSS link
 		if ( $fResponsive && $sBoostrapOption == 'twitter' ) {
-			$sReplace .= "\n".'<link rel="stylesheet" type="text/css" href="'.$aLocalCss['twitter_responsive'].'">';
+			
+			$sResponsiveCssLink = $aLocalCss['twitter_responsive'];
+			
+			//link to the Twitter LESS-compiled CSS (only if the file exists)
+			if ( self::getOption( 'use_compiled_css' ) == 'Y' && file_exists( self::$BOOSTRAP_DIR.'css'.DS.'bootstrap-responsive.less'.$sMinifiedCssOption ) ) {
+				$sResponsiveCssLink = $aLocalCss['twitter_responsive_less'];
+			}
+			$sReplace .= "\n".'<link rel="stylesheet" type="text/css" href="'.$sResponsiveCssLink.'" />';
 		}
 
 		//Custom/Reset CSS
 		if ( $fCustomCss ) {
 			$sCustomCssUrl = self::getOption( 'customcss_url' );
 			if ( !empty($sCustomCssUrl) ) {
-				$sReplace .= "\n".'<link rel="stylesheet" type="text/css" href="'.$sCustomCssUrl.'">';
+				$sReplace .= "\n".'<link rel="stylesheet" type="text/css" href="'.$sCustomCssUrl.'" />';
 			}
 		}
 		$sReplace .= "\n<!-- / WordPress Twitter Bootstrap CSS Plugin from Worpit. -->";
