@@ -1,12 +1,16 @@
+    <div id="pre-footer">
+        <h3>Get your free consultation:</h3>
+        <?php echo do_shortcode('[contact-form-7 id="682" title="Footer Free Consultation"]'); ?>
+    </div>
     <div id="footer">
-         	<div class="fleft">
-            <p> &copy; <?php	 	  the_time('Y'); ?> <?php	 	  bloginfo(); ?>  All right reserved.</p>
+            <div class="fleft">
+            <p> &copy; <?php          the_time('Y'); ?> <?php         bloginfo(); ?>  All right reserved.</p>
             
-             <?php	 	  if ( get_option('ptthemes_footerpages') <> "" ) { ?>
-			<ul>
-			<?php	 	  wp_list_pages('title_li=&depth=0&include=' . get_option('ptthemes_footerpages') . '&sort_column=menu_order'); ?>
-			</ul>
-		<?php	 	  } ?>
+             <?php        if ( get_option('ptthemes_footerpages') <> "" ) { ?>
+            <ul>
+            <?php         wp_list_pages('title_li=&depth=0&include=' . get_option('ptthemes_footerpages') . '&sort_column=menu_order'); ?>
+            </ul>
+        <?php         } ?>
             
            </div>
             
@@ -17,9 +21,9 @@
         
      </div><!-- footer #end -->
 
- <?php	 	  wp_footer(); ?><?php	 	  if ( get_option('ptthemes_google_analytics') <> "" ) { echo stripslashes(get_option('ptthemes_google_analytics')); } ?>
+ <?php        wp_footer(); ?><?php        if ( get_option('ptthemes_google_analytics') <> "" ) { echo stripslashes(get_option('ptthemes_google_analytics')); } ?>
 
 </body>
 
 </html>
-		
+         

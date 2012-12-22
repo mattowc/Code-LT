@@ -13,4 +13,179 @@ following declarations to this file:
 
 */
 
-#footer p span.templatic { width:112px; display:block; overflow:hidden;  float:left;    color:#fff;  background:url(images/onewebcentric.png) no-repeat 0;   }
+#footer p span.templatic 
+{ 
+	width:112px; 
+	display:block; 
+	overflow:hidden;  
+	float:left;    
+	color:#fff;  
+	background:url(images/onewebcentric.png) no-repeat 0;   
+}
+
+a.go-to:hover 
+{
+	color: #FFF;
+}
+
+.p-btn
+{
+	margin-top: 15px;
+}
+
+.left-div 
+{
+	color: #333;
+	line-height: 18px;
+}
+
+.subscribe_in .bsubscribe
+{
+	top: 13px;
+}
+
+a.call-to-action
+{
+	background-color: #5D0C0A;
+	color: white !important;
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+a.call-to-action:hover 
+{
+	-webkit-transition: 400ms;
+	background-color: #3E4B5D;
+	color: white !important;
+	text-decoration: none !important;
+}
+
+#footer
+{
+	margin-bottom: 60px;
+}
+
+p.call-to-action
+{
+	margin-bottom: 20px;
+}
+
+.wpcf7-not-valid-tip {
+position: relative !important;
+top: 0 !important;
+left: 0 !important;
+z-index: 100;
+background: none !important;
+border: 0 !important;
+font-size: 10pt;
+width: 280px;
+padding: 2px;
+color: red;
+display: block;
+}
+
+.front-image
+{
+	border: none;
+	margin-bottom: 5px;
+}
+
+.jon-text
+{
+	float: left !important;
+	width: 200px !important;
+	margin-right: 10px;
+}
+
+table
+{
+	border: 1px solid;
+	padding: 10px;
+	width: 100%;
+}
+
+tr
+{
+	border: 1px solid;
+	padding: 10px;
+}
+
+td
+{
+	border: 1px solid;
+	padding: 10px;
+}
+
+#pre-footer
+{
+	clear:both; 
+	display: block; 
+	margin: 0 auto; 
+	width: 900px; 
+	padding-top: 20px;
+}
+
+#pre-footer h3
+{
+	text-align: center; 
+	font-size: 18px; 
+	font-weight: bolder;
+}
+
+#pre-footer .wpcf7 .wpcf7-form .wpcf7-form-control-wrap .wpcf7-not-valid-tip
+{
+	position: absolute !important;
+	top: 30px !important;
+	left: 0 !important;
+}
+
+#pre-footer .wpcf7 .wpcf7-form .wpcf7-form-control-wrap
+{
+	display: inline-block;
+	top: 11px;
+}
+
+.questions li
+{
+	padding: 10px !important;
+	line-height: 1.5 !important;
+	font-size: 14px;
+	background: #CCC !important;
+	margin: 0 0 0 0 !important;
+	border-bottom: none !important;
+	counter-increment: section;
+	counter-reset: sub-section;
+}
+
+.questions li:nth-child(odd)
+{
+	background: #E3E3E3 !important;
+}
+
+.questions li:before
+{
+	content: counter(section) " ";
+	background: #74726C;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	text-align: center;
+	font-weight: bold;
+	display: block;
+	float: left;
+	margin-right: 5px;
+	text-shadow: 0 1.5px 0 rgba(0, 0, 0, .5);
+	color: white;
+}
+
+#index_content a, #content a
+{
+	color: #5D0C0B;
+	font-weight: bolder;
+}
+
+#index_content a:hover, #content a:hover
+{
+	text-decoration: underline;
+}

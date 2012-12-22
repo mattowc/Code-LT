@@ -31,6 +31,7 @@
 <?php	 	  } ?>
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php	 	  if ( get_option('ptthemes_feedburner_url') <> "" ) { echo get_option('ptthemes_feedburner_url'); } else { echo get_bloginfo_rss('rss2_url'); } ?>" />
 <link rel="pingback" href="<?php	 	  bloginfo('pingback_url'); ?>" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet" type="text/css" />
 <!--[if lt IE 7]>
 <script type="text/javascript" src="<?php	 	  bloginfo('template_directory'); ?>/library/js/pngfix.js"></script>
 <![endif]-->
@@ -48,10 +49,12 @@
 <?php	 	  if ( get_option('ptthemes_customcss') ) { ?>
 <link href="<?php	 	  bloginfo('template_directory'); ?>/custom.css" rel="stylesheet" type="text/css">
 <?php	 	  } ?>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
-<script type="text/javascript" src="http://learningtechnicsutah.com/special/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
+<script type="text/javascript" src="//learningtechnicsutah.com/special/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/css" media="screen" />
+
 <script>
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
 	/* This is basic - uses default settings */
 	
@@ -81,7 +84,7 @@ $(document).ready(function() {
 	
 });
 </script>
-<link rel="stylesheet" href="wp-content/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php	 	  bloginfo('url'); ?>/wp-content/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
 </head>
 
