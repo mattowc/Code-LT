@@ -27,7 +27,7 @@ $(window).load(function() {
 	  effect:'fold,fade,slideInRight,slideInLeft,sliceUpLeft,sliceUp', //Specify sets like: 'fold,fade,sliceDown'
 		slices:15,
 		animSpeed:500,
-		pauseTime:5000,
+		pauseTime:3000,
 		startSlide:0, //Set starting Slide (0 index)
 		directionNav:true, //Next & Prev
 		directionNavHide:true, //Only show on hover
