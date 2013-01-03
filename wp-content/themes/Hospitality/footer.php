@@ -1,6 +1,6 @@
     <div style="width:100%; display:block;">
     <div id="pre-footer">
-        <h3>Call Us at 800-893-9315 or Schedule a Consultation by Filling the Form Below</h3>
+        <h3>Call us at 800-893-9315 or Schedule a Consultation by Filling the Form Below</h3>
         <?php echo do_shortcode('[contact-form-7 id="682" title="Footer Free Consultation"]'); ?>
     </div>
     </div>
